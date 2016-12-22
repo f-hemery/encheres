@@ -32,7 +32,7 @@ export class ProductService {
     getReviewsForProduct(productId: number): Review[] {
         return reviews
             .filter(r => r.productId === productId)
-            .map(r => new Review(r.id, r.productId, Date.parse(r.timestamp), r.user, r.rating, r.comment));
+            .map(r => new Review(r.id, r.productId, new Date(r.timestamp), r.user, r.rating, r.comment));
     }
 }
 

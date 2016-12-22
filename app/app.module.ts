@@ -12,9 +12,11 @@ import StarsComponent from "./components/stars/stars";
 import {ProductService} from "./services/product-service";
 import HomeComponent from "./components/home/home";
 import ProductDetailComponent from "./components/product-detail/product-detail";
+import {ReactiveFormsModule} from "@angular/forms";
+import {FilterPipe} from "./components/pipes/filter-pipe";
 
 @NgModule({
-    imports:      [ BrowserModule,
+    imports:      [ BrowserModule, ReactiveFormsModule,
                     RouterModule.forRoot([
                         {path: '',                    component: HomeComponent},
                         {path: 'products/:productId', component: ProductDetailComponent}
@@ -27,7 +29,8 @@ import ProductDetailComponent from "./components/product-detail/product-detail";
                     ProductDetailComponent,
                     ProductItemComponent,
                     SearchComponent,
-                    StarsComponent],
+                    StarsComponent,
+                    FilterPipe],
     providers:    [ProductService,
                    {provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap:    [ ApplicationComponent ]
