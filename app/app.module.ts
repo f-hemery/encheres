@@ -12,11 +12,11 @@ import StarsComponent from "./components/stars/stars";
 import {ProductService} from "./services/product-service";
 import HomeComponent from "./components/home/home";
 import ProductDetailComponent from "./components/product-detail/product-detail";
-import {ReactiveFormsModule} from "@angular/forms";
+import {ReactiveFormsModule, FormsModule} from "@angular/forms";
 import {FilterPipe} from "./components/pipes/filter-pipe";
 
 @NgModule({
-    imports:      [ BrowserModule, ReactiveFormsModule,
+    imports:      [ BrowserModule, ReactiveFormsModule, FormsModule,
                     RouterModule.forRoot([
                         {path: '',                    component: HomeComponent},
                         {path: 'products/:productId', component: ProductDetailComponent}
