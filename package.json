@@ -6,37 +6,43 @@
   "scripts": {
     "tsc": "tsc",
     "start": "node build/auction.js",
-    "dev": "nodemon build/auction.js"
+    "dev": "nodemon build/auction.js",
+    "test": "karma start karma.conf.js"
   },
   "engines": {
     "npm": ">=2.14.x"
   },
   "dependencies": {
-    "@angular/common": "~2.0.2",
-    "@angular/compiler": "~2.0.2",
-    "@angular/core": "~2.0.2",
-    "@angular/forms": "~2.0.2",
-    "@angular/http": "~2.0.2",
-    "@angular/platform-browser": "~2.0.2",
-    "@angular/platform-browser-dynamic": "~2.0.2",
-    "@angular/router": "~3.0.0",
-    "@types/express": "^4.0.28-alpha",
-    "@types/node": "^4.0.28-alpha",
-    "bootstrap": "^3.3.6",
+    "@angular/common": "^2.0.0",
+    "@angular/compiler": "^2.0.0",
+    "@angular/core": "^2.0.0",
+    "@angular/forms": "^2.0.0",
+    "@angular/http": "^2.0.0",
+    "@angular/platform-browser": "^2.0.0",
+    "@angular/platform-browser-dynamic": "^2.0.0",
+    "@angular/router": "^3.0.0",
+    "reflect-metadata": "^0.1.8",
     "core-js": "^2.4.0",
-    "express": "^4.13.3",
-    "jquery": "^2.2.2",
-    "rxjs": "5.0.0-beta.12",
+    "rxjs": "5.0.1",
     "systemjs": "0.19.37",
+    "express": "^4.13.3",
     "ws": "^1.1.1",
-    "zone.js": "0.6.21"
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.2",
+    "reflect-metadata": "^0.1.9",
+    "zone.js": "0.7.2"
   },
   "devDependencies": {
     "@types/es6-shim": "^0.0.30",
+    "@types/express": "^4.0.32",
+    "@types/jasmine": "^2.5.38",
     "@types/ws": "^0.0.29",
+    "jasmine-core": "2.4.1",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.0",
     "nodemon": "^1.8.1",
     "typescript": "^2.0.0"
   }
 }
-
-
