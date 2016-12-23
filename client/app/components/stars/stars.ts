@@ -27,7 +27,7 @@ export default class StarsComponent {
   @Output()
   ratingChange: EventEmitter<number> = new EventEmitter();
 
-  fillStarsWithColor(index: number) {
+  fillStarsWithColor(index) {
 
     if (!this.readonly) {
       this.rating = index + 1;

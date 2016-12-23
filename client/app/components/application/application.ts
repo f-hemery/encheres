@@ -6,4 +6,5 @@ import {Component, ViewEncapsulation} from '@angular/core';
   styleUrls: ['app/components/application/application.css'],
   encapsulation:ViewEncapsulation.None
 })
+
 export default class ApplicationComponent {}

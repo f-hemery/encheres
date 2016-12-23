@@ -1,6 +1,8 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import {HttpModule} from '@angular/http';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import ApplicationComponent from './components/application/application';
 import CarouselComponent from "./components/carousel/carousel";
@@ -10,13 +12,13 @@ import ProductItemComponent from "./components/product-item/product-item";
 import SearchComponent from "./components/search/search";
 import StarsComponent from "./components/stars/stars";
 import {ProductService} from "./services/product-service";
+import {ONLINE_AUCTION_SERVICES} from './services/services';
 import HomeComponent from "./components/home/home";
 import ProductDetailComponent from "./components/product-detail/product-detail";
-import {ReactiveFormsModule, FormsModule} from "@angular/forms";
-import {FilterPipe} from "./components/pipes/filter-pipe";
 
 @NgModule({
-    imports:      [ BrowserModule, ReactiveFormsModule, FormsModule,
+    imports:      [ BrowserModule, ReactiveFormsModule,
+                    FormsModule, HttpModule,
                     RouterModule.forRoot([
                         {path: '',                    component: HomeComponent},
                         {path: 'products/:productId', component: ProductDetailComponent}
@@ -29,9 +31,9 @@ import {FilterPipe} from "./components/pipes/filter-pipe";
                     ProductDetailComponent,
                     ProductItemComponent,
                     SearchComponent,
-                    StarsComponent,
-                    FilterPipe],
+                    StarsComponent],
     providers:    [ProductService,
+                   ONLINE_AUCTION_SERVICES,
                    {provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap:    [ ApplicationComponent ]
 })
